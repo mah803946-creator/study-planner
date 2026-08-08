@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="icon.png" alt="App Icon" class="app-icon">
+            <h1>Study Planner</h1>
+        </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="planner.html">Planner</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="profile.html">Profile</a>
+            <a href="settings.html">Settings</a>
+            <a href="login.html" class="btn-login">Login</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <section class="hero">
+            <h2>Welcome to Your Study Planner</h2>
+            <p>Organize your courses, track assignments, and master your study routine effortlessly.</p>
+            <div class="cta-buttons">
+                <a href="planner.html" class="btn-primary">Go to Planner</a>
+                <a href="calendar.html" class="btn-secondary">View Calendar</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>📅 Daily Schedule</h3>
+                <p>Keep track of your study sessions and upcoming deadlines in one place.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 Progress Tracker</h3>
+                <p>Monitor your academic goals and subject progress throughout the semester.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚙️ Customizable Settings</h3>
+                <p>Tailor notifications, themes, and study preferences to match your workflow.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Study Planner. All rights reserved.</p>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
