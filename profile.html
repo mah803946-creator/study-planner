@@ -1,55 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - Study Planner Pro</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="icon.png">
-    <link rel="apple-touch-icon" href="icon.png">
-</head>
-<body>
+<script>
+    const savedUser = localStorage.getItem('studyPlannerUser');
+    const savedEmail = localStorage.getItem('studyPlannerEmail');
+    
+    if (savedUser) {
+        document.getElementById('profile-name').textContent = savedUser;
+    }
+    
+    if (savedEmail) {
+        const emailEl = document.createElement('p');
+        emailEl.style.cssText = "color: #64748b; font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px;";
+        emailEl.textContent = `Email: ${savedEmail}`;
+        document.getElementById('profile-name').parentElement.after(emailEl);
+    }
 
-    <header>
-        <div class="logo-container">
-            <span>👤</span> User Profile
-        </div>
-        <div class="subtitle">Manage account details & settings</div>
-    </header>
+    document.getElementById('logout-btn').addEventListener('click', () => {
+        localStorage.removeItem('studyPlannerUser');
+        localStorage.removeItem('studyPlannerEmail');
+        window.location.href = 'login.html';
+    });
+</script>
 
-    <main>
-        <section class="card">
-            <div class="card-header">
-                <i class="fa-solid fa-id-card"></i> Account Info
-            </div>
-            <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 15px;">
-                Logged in as: <strong id="profile-name" style="color: #2563eb;">Guest</strong>
-            </p>
-            <div style="display: flex; gap: 8px;">
-                <a href="login.html" class="timer-btn start" style="text-align: center; text-decoration: none; padding: 10px; display: block; flex: 1; border-radius: 10px;">Change User</a>
-                <button id="logout-btn" class="timer-btn reset" style="flex: 1; cursor: pointer; border-radius: 10px; border: none;">Logout</button>
-            </div>
-        </section>
-    </main>
-
-    <nav class="bottom-nav">
-        <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i></a>
-        <a href="calendar.html" class="nav-item"><i class="fa-solid fa-calendar-days"></i></a>
-        <a href="planner.html" class="nav-item"><i class="fa-solid fa-pen-to-square"></i></a>
-        <a href="profile.html" class="nav-item active"><i class="fa-solid fa-user"></i></a>
-    </nav>
-
-    <script>
-        const savedUser = localStorage.getItem('studyPlannerUser');
-        if (savedUser) {
-            document.getElementById('profile-name').textContent = savedUser;
-        }
-
-        document.getElementById('logout-btn').addEventListener('click', () => {
-            localStorage.removeItem('studyPlannerUser');
-            window.location.href = 'login.html';
-        });
-    </script>
-</body>
-</html>
