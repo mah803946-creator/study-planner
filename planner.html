@@ -15,19 +15,21 @@
         <div class="logo-container">
             <span>📝</span> Study Planner
         </div>
-        <div class="subtitle">Organize your tasks and goals</div>
+        <div class="subtitle">Organize your daily goals</div>
     </header>
 
     <main>
         <section class="card">
             <div class="card-header">
-                <i class="fa-solid fa-square-check" style="color: #16a34a;"></i> Tasks
+                <i class="fa-solid fa-pen-to-square"></i> Add New Task
             </div>
             <div class="task-input-group">
-                <input type="text" id="task-input" placeholder="Add a task...">
-                <button class="add-btn" id="add-task-btn">Add</button>
+                <input type="text" id="task-input" placeholder="What needs to be studied?">
+                <button id="add-task-btn" class="add-btn">Add</button>
             </div>
-            <ul id="task-list" style="list-style: none; margin-top: 10px;"></ul>
+            <ul id="task-list" style="list-style: none; margin-top: 16px;">
+                <!-- Synced tasks appear here -->
+            </ul>
         </section>
     </main>
 
