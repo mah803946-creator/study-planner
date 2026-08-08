@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Task Management Logic
     const taskInput = document.getElementById('task-input');
     const addTaskBtn = document.getElementById('add-task-btn');
     const taskList = document.getElementById('task-list');
@@ -91,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Focus Timer Logic
     const timerDisplay = document.getElementById('timer');
     const startBtn = document.querySelector('.timer-btn.start');
     const pauseBtn = document.querySelector('.timer-btn.pause');
