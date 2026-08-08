@@ -3,41 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Planner</title>
-    <!-- Relative stylesheet path -->
+    <title>Study Planner Pro</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Favicon -->
-    <link rel="icon" href="icon.png" type="image/png">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
     <header>
-        <nav>
-            <h1>Study Planner</h1>
-            <ul>
-                <!-- Relative navigation links -->
-                <li><a href="index.html">Home</a></li>
-                <li><a href="planner.html">Planner</a></li>
-                <li><a href="calendar.html">Calendar</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="settings.html">Settings</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
+        <div class="logo-container">
+            <span>📚</span> Study Planner Pro
+        </div>
+        <div class="subtitle">Plan • Focus • Achieve</div>
+        <div class="streak-badge">🔥 0 Day Streak</div>
     </header>
 
     <main>
-        <section class="hero">
-            <h2>Organize Your Studies Effectively</h2>
-            <p>Keep track of your tasks, schedules, and goals all in one place.</p>
-            <a href="planner.html" class="btn">Get Started</a>
+        <!-- Focus Timer Card -->
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-stopwatch"></i> Focus Timer
+            </div>
+            <div class="timer-tabs">
+                <button class="tab-btn active">Focus</button>
+                <button class="tab-btn">Short Break</button>
+                <button class="tab-btn">Long Break</button>
+            </div>
+            <div class="timer-display" id="timer">25:00</div>
+            <div class="timer-controls">
+                <button class="timer-btn start">Start</button>
+                <button class="timer-btn pause">Pause</button>
+                <button class="timer-btn reset">Reset</button>
+            </div>
+        </section>
+
+        <!-- Tasks Card -->
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-square-check" style="color: #16a34a;"></i> Tasks
+            </div>
+            <div class="task-input-group">
+                <input type="text" id="task-input" placeholder="Add a task...">
+                <button class="add-btn" id="add-task-btn">Add</button>
+            </div>
+            <ul id="task-list" style="list-style: none; margin-top: 10px;"></ul>
+        </section>
+
+        <!-- Daily Completion Card -->
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-chart-line"></i> Daily Completion
+            </div>
+            <div class="progress-stats">0% completed</div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill"></div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Study Planner</p>
-    </footer>
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active"><i class="fa-solid fa-house"></i></a>
+        <a href="calendar.html" class="nav-item"><i class="fa-solid fa-calendar-days"></i></a>
+        <a href="planner.html" class="nav-item"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="profile.html" class="nav-item"><i class="fa-solid fa-user"></i></a>
+    </nav>
 
-    <!-- Relative script path -->
     <script src="app.js"></script>
 </body>
 </html>
