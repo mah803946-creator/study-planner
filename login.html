@@ -65,7 +65,7 @@
 
     <script>
         function handleCredentialResponse(response) {
-            // Decode Google JWT token payload safely on the client side
+            // Decodes the Google JWT token safely on the client side
             const base64Url = response.credential.split('.')[1];
             const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
             const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
