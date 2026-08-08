@@ -3,38 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar - Study Planner</title>
+    <title>Calendar - Study Planner Pro</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
     <header>
-        <nav>
-            <h1>Study Planner</h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="planner.html">Planner</a></li>
-                <li><a href="calendar.html" class="active">Calendar</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="settings.html">Settings</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
+        <div class="logo-container">
+            <span>📅</span> Calendar Schedule
+        </div>
+        <div class="subtitle">Manage your deadlines and events</div>
     </header>
 
     <main>
-        <section class="calendar-section">
-            <h2>Calendar Schedule</h2>
-            <div id="calendar-container">
-                <!-- Initial calendar structure placeholder -->
-                <p>Calendar grid loading...</p>
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-calendar-days"></i> Monthly View
+            </div>
+            <div id="calendar-container" style="text-align: center; padding: 20px; color: #64748b;">
+                Calendar schedule grid loading...
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Study Planner</p>
-    </footer>
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i></a>
+        <a href="calendar.html" class="nav-item active"><i class="fa-solid fa-calendar-days"></i></a>
+        <a href="planner.html" class="nav-item"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="profile.html" class="nav-item"><i class="fa-solid fa-user"></i></a>
+    </nav>
 
     <script src="app.js"></script>
 </body>
