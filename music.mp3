@@ -1,0 +1,3 @@
+<audio id="ambient-audio" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
