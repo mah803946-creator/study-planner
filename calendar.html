@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar — Aesthetic Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <span>📅</span> Study Schedule
+        </div>
+        <div class="subtitle">Plan your academic journey ahead</div>
+    </header>
+
+    <main>
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-calendar-day"></i> Select Date & Add Plan
+            </div>
+            
+            <div style="margin-bottom: 12px;">
+                <label class="input-label">Choose Date:</label>
+                <input type="date" id="plan-date-input" class="styled-input">
+            </div>
+
+            <div style="margin-bottom: 14px;">
+                <label class="input-label">What do you plan to do?</label>
+                <textarea id="plan-text-input" placeholder="e.g., Study Chapter 4 accounting, complete notes..." rows="3" class="styled-input" style="resize: none;"></textarea>
+            </div>
+
+            <button id="save-plan-btn" class="timer-btn start" style="width: 100%; padding: 12px; font-size: 0.9rem;">Save Plan</button>
+        </section>
+
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-list-check"></i> Your Scheduled Plans
+            </div>
+            <ul id="saved-plans-list" style="list-style: none; margin-top: 8px;"></ul>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i></a>
+        <a href="calendar.html" class="nav-item active"><i class="fa-solid fa-calendar-days"></i></a>
+        <a href="settings.html" class="nav-item"><i class="fa-solid fa-gear"></i></a>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
