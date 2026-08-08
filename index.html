@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <span>📖</span> Study Planner Pro
+        </div>
+        <div class="subtitle">Plan • Focus • Achieve</div>
+        <div class="streak-badge"><i class="fa-solid fa-fire" style="color: #f59e0b;"></i> <span id="streak-count">0</span> Day Streak</div>
+        <!-- Motivational Quote Banner -->
+        <div id="quote-banner" style="margin-top: 10px; font-size: 0.75rem; color: var(--text-muted); font-style: italic; background: #f8fafc; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--border-color);">
+            "Small progress every day adds up to big results."
+        </div>
+    </header>
+
+    <main>
+        <!-- Focus Timer Card with Custom Duration Settings -->
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-clock"></i> Focus Timer
+            </div>
+            <div class="timer-tabs">
+                <button class="tab-btn active">Focus</button>
+                <button class="tab-btn">Short Break</button>
+                <button class="tab-btn">Long Break</button>
+            </div>
+            
+            <!-- Custom Time Inputs -->
+            <div style="display: flex; gap: 8px; margin-bottom: 12px; justify-content: center; align-items: center; font-size: 0.8rem; color: var(--text-muted);">
+                <label>Focus (min): <input type="number" id="custom-focus-input" value="25" min="1" max="120" style="width: 50px; padding: 4px; border: 1px solid var(--border-color); border-radius: 6px; text-align: center;"></label>
+                <label>Break (min): <input type="number" id="custom-break-input" value="5" min="1" max="60" style="width: 50px; padding: 4px; border: 1px solid var(--border-color); border-radius: 6px; text-align: center;"></label>
+                <button id="save-time-btn" style="background: var(--primary); color: white; border: none; padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 0.75rem;">Set</button>
+            </div>
+
+            <div class="timer-display" id="timer">25:00</div>
+            <div class="timer-controls">
+                <button class="timer-btn start">Start</button>
+                <button class="timer-btn pause">Pause</button>
+                <button class="timer-btn reset">Reset</button>
+            </div>
+        </section>
+
+        <!-- Study Ambience Music Card -->
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-music"></i> Study Ambience
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center; justify-content: space-between;">
+                <span id="now-playing" style="font-size: 0.85rem; color: var(--text-muted);">Lofi Beats (Relaxing)</span>
+                <button id="music-toggle-btn" class="timer-btn start" style="flex: 0 0 90px; padding: 6px 12px; font-size: 0.8rem;">
+                    <i class="fa-solid fa-play"></i> Play
+                </button>
+            </div>
+            <audio id="ambient-audio" loop preload="none">
+                <source src="https://stream.zeno.fm/f3wvbbqmd88uv" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <!-- Tasks Card -->
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-square-check"></i> Tasks
+            </div>
+            <div class="task-input-group">
+                <input type="text" id="task-input" placeholder="Add a task...">
+                <button class="add-btn" id="add-task-btn">Add</button>
+            </div>
+            <ul id="task-list" style="list-style: none; margin-top: 12px;">
+                <!-- Dynamic Tasks Injected via JS -->
+            </ul>
+        </section>
+
+        <!-- Daily Completion Progress Card -->
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-chart-line"></i> Daily Completion
+            </div>
+            <div class="progress-stats">0% completed (0/0)</div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active"><i class="fa-solid fa-house"></i></a>
+        <a href="calendar.html" class="nav-item"><i class="fa-solid fa-calendar-days"></i></a>
+        <a href="planner.html" class="nav-item"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="profile.html" class="nav-item"><i class="fa-solid fa-user"></i></a>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
