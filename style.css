@@ -8,10 +8,9 @@
 body {
     background-color: #f0f4f8;
     color: #333;
-    padding-bottom: 80px; /* Space for bottom nav */
+    padding-bottom: 80px;
 }
 
-/* Header Section */
 header {
     text-align: center;
     padding: 20px 15px 10px;
@@ -44,7 +43,6 @@ header {
     margin-top: 8px;
 }
 
-/* Main Container Cards */
 main {
     padding: 10px 15px;
     display: flex;
@@ -61,7 +59,6 @@ main {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Focus Timer Card */
 .card-header {
     display: flex;
     align-items: center;
@@ -132,7 +129,6 @@ main {
     color: #334155;
 }
 
-/* Tasks Card */
 .task-input-group {
     display: flex;
     gap: 8px;
@@ -144,7 +140,7 @@ main {
     border: 1px solid #cbd5e1;
     border-radius: 10px;
     outline: none;
-    font-size: 0.95krem;
+    font-size: 0.95rem;
 }
 
 .task-input-group input:focus {
@@ -161,7 +157,6 @@ main {
     cursor: pointer;
 }
 
-/* Daily Completion Card */
 .progress-stats {
     font-size: 0.9rem;
     color: #475569;
@@ -182,7 +177,6 @@ main {
     border-radius: 5px;
 }
 
-/* Bottom Navigation Bar */
 .bottom-nav {
     position: fixed;
     bottom: 0;
