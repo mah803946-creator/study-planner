@@ -1,22 +1,107 @@
-<script>
-    const savedUser = localStorage.getItem('studyPlannerUser');
-    const savedEmail = localStorage.getItem('studyPlannerEmail');
-    
-    if (savedUser) {
-        document.getElementById('profile-name').textContent = savedUser;
-    }
-    
-    if (savedEmail) {
-        const emailEl = document.createElement('p');
-        emailEl.style.cssText = "color: #64748b; font-size: 0.85rem; margin-top: -10px; margin-bottom: 15px;";
-        emailEl.textContent = `Email: ${savedEmail}`;
-        document.getElementById('profile-name').parentElement.after(emailEl);
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Study Planner Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <style>
+        .profile-avatar {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), #a855f7);
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 12px auto;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+        }
+        .stat-box {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 12px;
+            text-align: center;
+            flex: 1;
+        }
+        .stat-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
 
-    document.getElementById('logout-btn').addEventListener('click', () => {
-        localStorage.removeItem('studyPlannerUser');
-        localStorage.removeItem('studyPlannerEmail');
-        window.location.href = 'login.html';
-    });
-</script>
+    <header>
+        <div class="logo-container">
+            <span>👤</span> User Profile
+        </div>
+        <div class="subtitle">Account details & statistics</div>
+    </header>
+
+    <main>
+        <section class="card" style="text-align: center;">
+            <div class="profile-avatar" id="avatar-initial">G</div>
+            <div class="card-header" style="justify-content: center; margin-bottom: 4px;" id="profile-name">Guest</div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 16px;" id="profile-email">Not signed in with Google</p>
+            
+            <!-- Statistics Row -->
+            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                <div class="stat-box">
+                    <div class="stat-value" id="pomodoro-stat">0</div>
+                    <div class="stat-label">Focus Sessions Finished</div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 8px;">
+                <a href="login.html" class="timer-btn start" style="text-align: center; text-decoration: none; padding: 12px; display: block; flex: 1; border-radius: 12px;">Switch Account</a>
+                <button id="logout-btn" class="timer-btn reset" style="flex: 1; cursor: pointer; border-radius: 12px; border: none;">Logout</button>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i></a>
+        <a href="calendar.html" class="nav-item"><i class="fa-solid fa-calendar-days"></i></a>
+        <a href="planner.html" class="nav-item"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="profile.html" class="nav-item active"><i class="fa-solid fa-user"></i></a>
+    </nav>
+
+    <script>
+        const savedUser = localStorage.getItem('studyPlannerUser');
+        const savedEmail = localStorage.getItem('studyPlannerEmail');
+        const pomodoroCount = localStorage.getItem('pomodoroCount') || 0;
+
+        if (savedUser) {
+            document.getElementById('profile-name').textContent = savedUser;
+            document.getElementById('avatar-initial').textContent = savedUser.charAt(0).toUpperCase();
+        }
+
+        if (savedEmail) {
+            document.getElementById('profile-email').textContent = savedEmail;
+        }
+
+        document.getElementById('pomodoro-stat').textContent = pomodoroCount;
+
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            localStorage.removeItem('studyPlannerUser');
+            localStorage.removeItem('studyPlannerEmail');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
 
