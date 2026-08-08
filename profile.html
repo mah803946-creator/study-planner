@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Study Planner Pro</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -18,23 +17,34 @@
 
     <main>
         <section class="card">
-            <div class="card-header">
-                <i class="fa-solid fa-id-card"></i> Account Info
-            </div>
-            <p style="color: #64748b; font-size: 0.95rem;">Track your study achievements, streaks, and personal preferences here.</p>
-            <div style="margin-top: 15px;">
-                <a href="settings.html" class="add-btn" style="display: block; text-align: center; text-decoration: none; padding: 10px;">Go to Settings</a>
+            <div class="card-header">Account Info</div>
+            <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 15px;">
+                Logged in as: <strong id="profile-name" style="color: #2563eb;">Guest</strong>
+            </p>
+            <div style="display: flex; gap: 8px;">
+                <a href="login.html" class="timer-btn start" style="text-align: center; text-decoration: none; padding: 10px; display: block; flex: 1; border-radius: 10px;">Change User</a>
+                <button id="logout-btn" class="timer-btn reset" style="flex: 1; cursor: pointer; border-radius: 10px; border: none;">Logout</button>
             </div>
         </section>
     </main>
 
     <nav class="bottom-nav">
-        <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i></a>
-        <a href="calendar.html" class="nav-item"><i class="fa-solid fa-calendar-days"></i></a>
-        <a href="planner.html" class="nav-item"><i class="fa-solid fa-pen-to-square"></i></a>
-        <a href="profile.html" class="nav-item active"><i class="fa-solid fa-user"></i></a>
+        <a href="index.html" class="nav-item">🏠</a>
+        <a href="calendar.html" class="nav-item">📅</a>
+        <a href="planner.html" class="nav-item">📝</a>
+        <a href="profile.html" class="nav-item active">👤</a>
     </nav>
 
-    <script src="app.js"></script>
+    <script>
+        const savedUser = localStorage.getItem('studyPlannerUser');
+        if (savedUser) {
+            document.getElementById('profile-name').textContent = savedUser;
+        }
+
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            localStorage.removeItem('studyPlannerUser');
+            window.location.href = 'login.html';
+        });
+    </script>
 </body>
 </html>
