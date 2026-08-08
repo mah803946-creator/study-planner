@@ -3,42 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Planner - Calendar</title>
+    <title>Calendar - Study Planner</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png" type="image/png">
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <h1>Study Planner</h1>
-        </div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="planner.html">Planner</a>
-            <a href="calendar.html" class="active">Calendar</a>
-            <a href="profile.html">Profile</a>
-            <a href="settings.html">Settings</a>
-            <a href="login.html">Login</a>
+            <h1>Study Planner</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="planner.html">Planner</a></li>
+                <li><a href="calendar.html" class="active">Calendar</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <section class="card">
-            <h2>🗓️ Schedule & Deadlines</h2>
-            <div class="event-item">
-                <strong>Midterm Exam</strong>
-                <p>Date: Next Monday | Time: 10:00 AM</p>
-            </div>
-            <div class="event-item">
-                <strong>Project Submission</strong>
-                <p>Date: Friday | Time: 11:59 PM</p>
+        <section class="calendar-section">
+            <h2>Calendar Schedule</h2>
+            <div id="calendar-container">
+                <!-- Initial calendar structure placeholder -->
+                <p>Calendar grid loading...</p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Study Planner. All rights reserved.</p>
+        <p>&copy; 2026 Study Planner</p>
     </footer>
 
     <script src="app.js"></script>
 </body>
 </html>
+
