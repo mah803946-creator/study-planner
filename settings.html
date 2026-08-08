@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings — Aesthetic Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <span>⚙️</span> App Settings
+        </div>
+        <div class="subtitle">Customize your aesthetic space</div>
+    </header>
+
+    <main>
+        <!-- Preferences Section -->
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-sliders"></i> Preferences
+            </div>
+            
+            <div class="settings-row">
+                <div>
+                    <div style="font-size: 0.9rem; font-weight: 600;">Sound Effects</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">Play chime when timer finishes</div>
+                </div>
+                <input type="checkbox" id="sound-toggle-setting" checked class="styled-checkbox">
+            </div>
+
+            <div class="settings-row" style="border: none; padding-bottom: 0;">
+                <div>
+                    <div style="font-size: 0.9rem; font-weight: 600;">Appearance Theme</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">Switch light/dark mode</div>
+                </div>
+                <button id="settings-theme-btn" class="timer-btn start" style="flex: 0 0 110px; padding: 6px; font-size: 0.8rem;">Toggle Theme</button>
+            </div>
+        </section>
+
+        <!-- Account / Stats Reset Section -->
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-user-gear"></i> Account & Progression
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">
+                Current Level: <strong id="settings-level" style="color: var(--text-main);">1</strong> | XP: <strong id="settings-xp" style="color: var(--text-main);">0</strong>
+            </div>
+            <button id="reset-progress-btn" class="danger-btn-outline">
+                <i class="fa-solid fa-rotate-left"></i> Reset Level & XP
+            </button>
+        </section>
+
+        <!-- Data Management Section -->
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-database"></i> Data & Backup
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <button id="export-data-btn" class="timer-btn pause" style="flex: 1; padding: 10px; font-size: 0.85rem;">Export Backup</button>
+                <button id="clear-all-data-btn" class="danger-btn-solid" style="flex: 1; padding: 10px; font-size: 0.85rem;">Clear All Data</button>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="card" style="text-align: center; background: var(--primary-light); border-color: var(--primary);">
+            <div class="card-header" style="justify-content: center; color: var(--primary);">
+                <i class="fa-solid fa-mug-hot"></i> Support the Developer
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.4;">
+                Enjoying the app? Consider buying me a coffee to help keep updates rolling! ☕✨
+            </p>
+            <!-- Replace 'yourusername' with your actual Buy Me a Coffee or Ko-fi username -->
+            <a href="https://www.buymeacoffee.com/yourusername" target="_blank" class="timer-btn start" style="display: block; text-decoration: none; padding: 12px; font-size: 0.9rem;">
+                <i class="fa-solid fa-heart" style="color: #ffdd59; margin-right: 6px;"></i> Buy Me a Coffee
+            </a>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i></a>
+        <a href="calendar.html" class="nav-item"><i class="fa-solid fa-calendar-days"></i></a>
+        <a href="settings.html" class="nav-item active"><i class="fa-solid fa-gear"></i></a>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>
