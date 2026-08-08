@@ -3,37 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - Study Planner</title>
+    <title>Profile - Study Planner Pro</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
     <header>
-        <nav>
-            <h1>Study Planner</h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="planner.html">Planner</a></li>
-                <li><a href="calendar.html">Calendar</a></li>
-                <li><a href="profile.html" class="active">Profile</a></li>
-                <li><a href="settings.html">Settings</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
+        <div class="logo-container">
+            <span>👤</span> User Profile
+        </div>
+        <div class="subtitle">Manage account details & settings</div>
     </header>
 
     <main>
-        <section class="profile-section">
-            <h2>User Profile</h2>
-            <p>Manage your account info and study tracking stats here.</p>
+        <section class="card">
+            <div class="card-header">
+                <i class="fa-solid fa-id-card"></i> Account Info
+            </div>
+            <p style="color: #64748b; font-size: 0.95rem;">Track your study achievements, streaks, and personal preferences here.</p>
+            <div style="margin-top: 15px;">
+                <a href="settings.html" class="add-btn" style="display: block; text-align: center; text-decoration: none; padding: 10px;">Go to Settings</a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Study Planner</p>
-    </footer>
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i></a>
+        <a href="calendar.html" class="nav-item"><i class="fa-solid fa-calendar-days"></i></a>
+        <a href="planner.html" class="nav-item"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="profile.html" class="nav-item active"><i class="fa-solid fa-user"></i></a>
+    </nav>
 
     <script src="app.js"></script>
 </body>
 </html>
-
