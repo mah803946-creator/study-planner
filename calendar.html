@@ -6,6 +6,8 @@
     <title>Calendar - Study Planner Pro</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
     <style>
         .calendar-grid {
             display: grid;
@@ -62,9 +64,7 @@
                 <div class="calendar-header-day">Fri</div>
                 <div class="calendar-header-day">Sat</div>
             </div>
-            <div class="calendar-grid" id="calendar-days-container">
-                <!-- Days injected dynamically -->
-            </div>
+            <div class="calendar-grid" id="calendar-days-container"></div>
         </section>
     </main>
 
@@ -76,7 +76,6 @@
     </nav>
 
     <script>
-        // Render dynamic calendar grid
         const date = new Date();
         const year = date.getFullYear();
         const month = date.getMonth();
@@ -102,3 +101,4 @@
     </script>
 </body>
 </html>
+
