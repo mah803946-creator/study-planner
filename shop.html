@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Essentials & Gear</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="logo-container">
+                <i class="fa-solid fa-store" style="color: var(--primary);"></i> Study Essentials
+            </div>
+            <button id="theme-toggle-btn" class="icon-btn" title="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+        <div id="quote-banner">"Equip your workspace for maximum focus."</div>
+    </header>
+
+    <!-- Affiliate Products Grid Section -->
+    <section class="card">
+        <div class="card-header">
+            <i class="fa-solid fa-bag-shopping" style="color: var(--primary);"></i> Recommended Gear
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px; text-align: center;">
+            Handpicked tools to boost your productivity. Purchases support this app at no extra cost to you!
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+            <!-- Product Item 1 -->
+            <div style="display: flex; gap: 12px; align-items: center; padding: 12px; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color);">
+                <div style="font-size: 2rem; background: var(--card-bg); padding: 10px; border-radius: 8px;"><i class="fa-solid fa-headphones" style="color: var(--primary);"></i></div>
+                <div style="flex: 1;">
+                    <h4 style="font-size: 0.95rem; color: var(--text-main); margin-bottom: 4px;">Noise-Canceling Headphones</h4>
+                    <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px;">Block out distractions during deep focus sessions.</p>
+                    <a href="YOUR_AMAZON_AFFILIATE_LINK_HERE" target="_blank" class="set-btn" style="text-decoration: none; display: inline-block; padding: 6px 12px; font-size: 0.75rem;">View on Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Product Item 2 -->
+            <div style="display: flex; gap: 12px; align-items: center; padding: 12px; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color);">
+                <div style="font-size: 2rem; background: var(--card-bg); padding: 10px; border-radius: 8px;"><i class="fa-solid fa-book-open" style="color: var(--primary);"></i></div>
+                <div style="flex: 1;">
+                    <h4 style="font-size: 0.95rem; color: var(--text-main); margin-bottom: 4px;">Atomic Habits by James Clear</h4>
+                    <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px;">The ultimate guide to building good study habits.</p>
+                    <a href="YOUR_AMAZON_AFFILIATE_LINK_HERE" target="_blank" class="set-btn" style="text-decoration: none; display: inline-block; padding: 6px 12px; font-size: 0.75rem;">View on Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <!-- Product Item 3 -->
+            <div style="display: flex; gap: 12px; align-items: center; padding: 12px; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border-color);">
+                <div style="font-size: 2rem; background: var(--card-bg); padding: 10px; border-radius: 8px;"><i class="fa-solid fa-lightbulb" style="color: var(--primary);"></i></div>
+                <div style="flex: 1;">
+                    <h4 style="font-size: 0.95rem; color: var(--text-main); margin-bottom: 4px;">LED Desk Lamp with USB Port</h4>
+                    <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px;">Reduce eye strain during late-night study hours.</p>
+                    <a href="YOUR_AMAZON_AFFILIATE_LINK_HERE" target="_blank" class="set-btn" style="text-decoration: none; display: inline-block; padding: 6px 12px; font-size: 0.75rem;">View on Amazon <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><i class="fa-solid fa-house"></i></a>
+        <a href="planner.html" class="nav-item"><i class="fa-solid fa-calendar-days"></i></a>
+        <a href="shop.html" class="nav-item active"><i class="fa-solid fa-store"></i></a>
+        <a href="settings.html" class="nav-item"><i class="fa-solid fa-gear"></i></a>
+    </nav>
+
+    <!-- Theme Handling Script -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const htmlElement = document.documentElement;
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                htmlElement.setAttribute('data-theme', newTheme);
+                themeToggleBtn.innerHTML = newTheme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+            });
+        }
+    </script>
+</body>
+</html>
